@@ -1,4 +1,8 @@
-*,
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Press+Start+2P&display=swap');
+* {
+    font-family: 'Bangers', cursive;
+}
+
 *::after,
 *::before {
     box-sizing: border-box;
@@ -9,17 +13,39 @@
     --mark-size: calc(var(--cell-size) * .9);
 }
 
+h1 {
+    font-size: 800%;
+    color: rgb(230, 219, 219);
+}
+
+#rule {
+    font-size: 400%;
+}
+
+ol {
+    font-size: 300%;
+    text-align: justify;
+    color: rgb(212, 226, 191);
+}
+
 body {
     margin: 0;
+    text-align: center;
+    background-color: rgb(37, 37, 34);
 }
 
 .Maze {
-    width: 100vw;
-    height: 100vh;
     display: grid;
     justify-content: center;
     align-content: center;
     justify-items: center;
+    width: 400px;
+    height: 400px;
+    margin: auto;
+    border-radius: 50px;
+    background: rgba(255, 255, 255, 0.5);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(45px);
     align-items: center;
     grid-template-columns: repeat(3, auto)
 }
@@ -41,11 +67,11 @@ body {
     border-top: none;
 }
 
-.cell:nth-child(3n + 1) {
+.cell:nth-child(3n+1) {
     border-left: none;
 }
 
-.cell:nth-child(3n + 3) {
+.cell:nth-child(3n+3) {
     border-right: none;
 }
 
@@ -148,4 +174,5 @@ body {
 
 .winning-message.show {
     display: flex;
+    color: greenyellow;
 }
